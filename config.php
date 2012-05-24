@@ -7,6 +7,7 @@ $preset_default = array(
 
 $sliders = array(
     'gender_identity' => array(
+        'color' => '#63a8d9',
         'labels' => array(
             'title' => 'Gender Identity',
             'zero' => 'Nongendered',
@@ -39,6 +40,7 @@ $sliders = array(
         ),
     ),
     'gender_expression' => array(
+        'color' => '#e2ba37',
         'labels' => array(
             'title' => 'Gender Expression',
             'zero' => 'Agender',
@@ -49,6 +51,7 @@ $sliders = array(
         ),
     ),
     'biological_sex' => array(
+        'color' => '#b162a6',
         'labels' => array(
             'title' => 'Biological Sex',
             'zero' => 'Asex',
@@ -59,6 +62,7 @@ $sliders = array(
         ),
     ),
     'attracted_to' => array(
+        'color' => '#f26438',
         'labels' => array(
             'title' => 'Attracted to',
             'zero' => 'Nobody',

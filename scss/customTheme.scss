@@ -1,63 +1,179 @@
+#onion {
+    opacity: 0.2;
+    width: 1024px;
+    height: 662px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -500;
+}
 body {
     padding: 0px;
     margin: 0px;
+    font-family: sans-serif;
+    font-size: 12px;
 }
 #wrapper {
     padding: 10px;
 }
 #top {
-    height: 100px;
+    height: 50px;
     margin: 5px;
     h1, h2 {
         float: left;
-        margin: 10px;
+        margin: 0px;
+    }
+    h1 {
+        font-size: 300%;
+    }
+    h2 {
+        margin: 0px 10px;
     }
 }
 #left {
     float: left;
-    width: 700px;
+    width: 500px;
     margin: 5px;
 }
 #right {
     float: left;
-    width: 600px;
+    width: 500px;
     margin: 5px;
 }
 
+.infobox {
+    padding: 10px;
+    background: #f0f0f1;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; 
+}
+
+#genderbread_person {
+    margin: 15px 0px -140px 65px
+}
+
+/* Aspect boxes */
+.aspect {
+    clear: both;
+    margin: 10px 0px;
+    h1 {
+        margin: 0px;
+        margin-left: 105px;
+        img {
+            width: 221px;
+            height: 39px;
+        }
+    }
+    .zero, .sliders, .presets {
+        float: left;
+    }
+    .zero {
+        width: 120px;
+        line-height: 50px;
+        text-align: right;
+        font-size: 150%;
+        .brace {
+            color: gray;
+        }
+    }
+    .sliders {
+        margin-top: -1px;
+        width: 375px;
+        .arrowhead {
+            float: left;
+            height: 17px;
+            width: 30px;
+            background: url(../images/slider_arrowhead_mask.png) top right no-repeat;
+            margin: 5px 0px;
+            margin-left: -5px;
+        }
+
+        .label {
+            float: left;
+            line-height: 27px;
+            font-size: 150%;
+        }
+    }
+    .presets {
+        .info {
+            width: 115px;
+            float: left;
+            text-align: right;
+        }
+        .box_wrapper {
+            float: left;
+        }
+        .preset_box {
+            float: left;
+            height: 32px;
+            width: 57px;
+            margin: 5px;
+
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+
+            .marker {
+                background: url(../images/preset_arrow.png);
+                height: 5px;
+                width: 51px;
+                margin: 3px;
+                position:relative;
+
+                img.star {
+                    position:absolute;
+                    width: 7px;
+                    height: 7px;
+                    margin-left: -4px;
+                }
+            }
+            
+            .label {
+                font-size: 10px;
+                text-align: center;
+            }
+        }
+    }
+}
+
 .slider_wrapper {
-    width: 300px;
-    height: 50px;
-    margin: 20px;
-    position: relative;
+    float: left;
+    margin: 5px 0px;
+    clear: left;
 
     .ui-slider-handle:focus {
         outline: none;
     }
 
     .ui-slider {
-        background: url(../images/arrow_bg.png) repeat-x;
-        height: 8px;
-        margin: 5px 0px 6px 0px;
+        height: 5px;
+        margin: 6px 0px;
+        margin-left: 7px;
+        width: 142px;
         border: none;
         .ui-slider-handle {
-            background: url(../images/arrow_button.png) no-repeat;
+            background: url(../images/slider_button_mask.png) no-repeat;
             border: none;
-            height: 19px;
-            width: 19px;
-            top: -5px;
-            margin-left: -10px;
+            height: 17px;
+            width: 14px;
+            top: -6px;
+            margin-left: -7px;
+
+            /* Clean up buggy display with the mask... */
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px; 
+
             &:focus, &:hover {
-                background: url(../images/arrow_button_hover.png) no-repeat;
+                background: url(../images/slider_button_hover_mask.png) no-repeat;
             }
         }
     }
+}
 
-    .arrowhead {
-        position: absolute;
-        right: -20px;
-        top: -8px;
-        height: 24px;
-        width: 29px;
-        background: url(../images/arrow_head.png);
-    }
+//Attracted_to labels need to be smaller
+#attracted_to .sliders .label {
+    font-size: 125%;
 }
