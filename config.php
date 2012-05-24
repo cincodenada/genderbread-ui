@@ -2,7 +2,7 @@
 $preset_default = array(
     'top' => 0.5,
     'bottom' => 0.5,
-    'rand' => 0.25,
+    'rand' => 0.2,
 );
 
 $sliders = array(
@@ -15,28 +15,11 @@ $sliders = array(
             'bottom' => 'Man-ness',
         ),
         'presets' => array(
-            'woman' => array(
-                'top' => 0.5,
-                'bottom' => 0.0,
-            ),
-            'man' => array(
-                'top' => 0.0,
-                'bottom' => 0.5,
-            ),
-            'two-spirit' => array(
-                'top' => 0.5,
-                'bottom' => 0.5,
-            ),
-            'genderqueer' => array(
-                'top' => 0.4,
-                'bottom' => 0.6,
-                'rand' => 1.0,
-            ),
-            'genderless' => array(
-                'top' => 0.0,
-                'bottom' => 0.0,
-                'rand' => 0.1,
-            ),
+            'woman' => array(0.5,0.0),
+            'man' => array(0.0,0.5),
+            'two-spirit' => array(0.5,0.5),
+            'genderqueer' => array(0.4,0.6,1.0),
+            'genderless' => array(0.0,0.0,0.1),
         ),
     ),
     'gender_expression' => array(
@@ -48,6 +31,11 @@ $sliders = array(
             'bottom' => 'Feminine',
         ),
         'presets' => array(
+            'butch' => array(0.5,0),
+            'femme' => array(0,0.5),
+            'androgynous' => array(0.5,0.5,0.05),
+            'gender neutral' => array(0,0,0.1),
+            'hyper-masculine' => array(1,0,0.05),
         ),
     ),
     'biological_sex' => array(
@@ -59,6 +47,11 @@ $sliders = array(
             'bottom' => 'Male-ness',
         ),
         'presets' => array(
+            'male' => array(0,1,0.5),
+            'female' => array(1,0,0.5),
+            'intersex' => array(0.5,0.5),
+            'female self ID' => array(0.6,0.4,0.1),
+            'male self ID' => array(0.4,0.6,0.1),
         ),
     ),
     'attracted_to' => array(
@@ -70,6 +63,11 @@ $sliders = array(
             'bottom' => '(Women/Females/Femininity)',
         ),
         'presets' => array(
+            'straight' => array(1,0),
+            'gay' => array(1,0),
+            'pansexual' => array(1,1),
+            'asexual' => array(0,0,0.1),
+            'bisexual' => array(0.5,0.5,0.25),
         ),
     ),
 );

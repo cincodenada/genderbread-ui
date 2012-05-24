@@ -83,8 +83,13 @@
                                 $preset_list = array_slice($preset_list, 0, 5);
                             }
 
+                            $keys = array_keys($preset_default);
                             foreach($preset_list as $label) {
-                                $presets[$label] = $conf['presets'][$label];
+                                $vals = $conf['presets'][$label];
+                                $presets[$label] = array_combine(
+                                    array_slice($keys, 0, count($vals)),
+                                    $vals
+                                );
                             }
                         ?>
                         <div class="box_wrapper">
