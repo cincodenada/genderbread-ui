@@ -1,38 +1,41 @@
-#onion { opacity: 0.2; width: 1024px; height: 662px; position: absolute; top: 0px; left: 0px; z-index: -500; }
+#onion { opacity: 0.2; width: 1024px; height: 662px; position: absolute; top: 0px; left: 0px; z-index: 500; }
 
-body { padding: 0px; margin: 0px; font-family: sans-serif; font-size: 12px; }
+body { padding: 0px; margin: 0px; font-family: Neucha, sans-serif; font-size: 12px; }
 
 #wrapper { padding: 10px; }
 
-#top { height: 50px; margin: 5px; }
+#top { margin: 5px; float: left; clear: both; }
 #top h1, #top h2 { float: left; margin: 0px; }
-#top h1 { font-size: 300%; }
-#top h2 { margin: 0px 10px; }
+#top h1 { font-size: 475%; font-weight: normal; margin: 0px 20px; margin-bottom: -10px; }
+#top h2 { margin: 0px 10px; background: url(../images/attrib.png); width: 329px; height: 53px; margin-left: -5px; color: transparent; }
 
-#left { float: left; width: 500px; margin: 5px; }
+#left { float: left; width: 500px; margin: 0px 5px; margin-left: 20px; }
 
-#right { float: left; width: 500px; margin: 5px; }
+#right { float: left; width: 500px; }
 
-.infobox { padding: 10px; background: #f0f0f1; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
+.infobox { padding: 3px 7px 5px 7px; background: #f0f0f1; font-family: sans-serif; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
 
-#genderbread_person { margin: 15px 0px -140px 65px; }
+#genderbread_person { margin: 15px 0px -140px 45px; }
+
+#readmore { margin-left: -15px; }
 
 /* Aspect boxes */
-.aspect { clear: both; margin: 10px 0px; }
-.aspect h1 { margin: 0px; margin-left: 105px; }
+.aspect { clear: both; margin-bottom: 5px; }
+.aspect h1 { margin: 0px; margin-left: 96px; }
 .aspect h1 img { width: 221px; height: 39px; }
 .aspect .zero, .aspect .sliders, .aspect .presets { float: left; }
-.aspect .zero { width: 120px; line-height: 50px; text-align: right; font-size: 150%; }
-.aspect .zero .brace { color: gray; }
+.aspect .zero { width: 105px; margin-right: 5px; line-height: 50px; text-align: right; font-size: 150%; }
+.aspect .zero .brace { color: gray; font-size: 200%; position: relative; top: 5px; }
 .aspect .sliders { margin-top: -1px; width: 375px; }
 .aspect .sliders .arrowhead { float: left; height: 17px; width: 30px; background: url(../images/slider_arrowhead_mask.png) top right no-repeat; margin: 5px 0px; margin-left: -5px; }
 .aspect .sliders .label { float: left; line-height: 27px; font-size: 150%; }
-.aspect .presets .info { width: 115px; float: left; text-align: right; }
+.aspect .presets { clear: left; }
+.aspect .presets .info { width: 100px; margin: 7px 5px 7px 0px; float: left; text-align: right; }
 .aspect .presets .box_wrapper { float: left; }
 .aspect .presets .preset_box { float: left; height: 32px; width: 57px; margin: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
 .aspect .presets .preset_box .marker { background: url(../images/preset_arrow.png); height: 5px; width: 51px; margin: 3px; position: relative; }
 .aspect .presets .preset_box .marker img.star { position: absolute; width: 7px; height: 7px; margin-left: -4px; }
-.aspect .presets .preset_box .label { font-size: 10px; text-align: center; }
+.aspect .presets .preset_box .label { font-size: 80%; text-align: center; margin: 0px -5px; }
 
 .slider_wrapper { float: left; margin: 5px 0px; clear: left; }
 .slider_wrapper .ui-slider-handle:focus { outline: none; }

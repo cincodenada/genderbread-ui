@@ -4,6 +4,7 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/base/jquery-ui.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="css/customTheme.css"/>
 
@@ -22,13 +23,19 @@
                 background: <?php echo $conf['color'] ?>
             }
             #<?php echo $id ?> .masked,
-            #<?php echo $id ?> .slider_wrapper .ui-slider .ui-slider-handle {
+            #<?php echo $id ?> .slider_wrapper .ui-slider .ui-slider-handle 
+            {
                 background-color: <?php echo $conf['color'] ?>
+            }
+            #<?php echo $id ?> .presets .info
+            {
+                color: <?php echo $conf['color'] ?>
             }
             <?php endforeach; ?>
         </style>
     </head>
     <body>
+        <img id="onion" style="display:none;" src="images/Genderbread-2.1.png"/>
         <div id="wrapper">
             <div id="top">
                 <h1>The Genderbread Person v2.0</h1>
@@ -129,6 +136,7 @@
                             <?php endforeach; ?>
                         </div>
                     </div>
+                    <div style="clear:both;"></div>
                 </div>
                 <?php endforeach; ?>
             </div>
