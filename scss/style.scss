@@ -1,3 +1,4 @@
+/* Onionskin comparison div */
 #onion {
     opacity: 0.2;
     width: 1024px;
@@ -7,12 +8,15 @@
     left: 0px;
     z-index: 500;
 }
+
+/* Main styles */
 body {
     padding: 0px;
     margin: 0px;
     font-family: Neucha, sans-serif;
     font-size: 12px;
 }
+/* Structure styles (mostly) */
 #wrapper {
     padding: 10px;
 }
@@ -49,7 +53,12 @@ body {
     float: left;
     width: 500px;
 }
+#footer {
+    clear: both;
+    float: left;
+}
 
+/* Left-side positioning */
 .infobox {
     padding: 3px 7px 5px 7px;
     background: #f0f0f1;
@@ -159,6 +168,7 @@ body {
     }
 }
 
+/* Slider formatting */
 .slider_wrapper {
     float: left;
     margin: 5px 0px;
@@ -194,7 +204,56 @@ body {
     }
 }
 
-//Attracted_to labels need to be smaller
+/* Attracted_to labels need to be smaller */
 #attracted_to .sliders .label {
     font-size: 125%;
+}
+
+/* Popout box styles */
+#sharebox {
+    position: fixed;
+    top: 200px;
+    left: 0px;
+    
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            border: 1px solid #03204A;
+            text-align: center;
+            a {
+                display: block;
+                padding: 5px;
+                background: #024AAC; 
+            }
+            a:hover, a:active {
+                background: #0060CB;
+            }
+
+            &.divider {
+                background: #02397A; 
+                color: #FFFFFF;
+                padding: 2px;
+                font-size: 80%;
+                font-weight: bold;
+            }
+
+
+            &:first-child { 
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-radius-topright: 5px;
+                border-top-right-radius: 5px;
+            }
+            &:last-child {
+                -webkit-border-bottom-right-radius: 5px;
+                -moz-border-radius-bottomright: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+}
+
+.tabcontent {
+    display: none;
 }

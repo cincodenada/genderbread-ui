@@ -6,11 +6,32 @@
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/base/jquery-ui.css"/>
         <link href='http://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="css/customTheme.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
 
         <script type="text/javascript">
             $(function() {
-                $('.slider').slider();
+                //Slidify!
+                $('.slider').slider({
+                    create: function(evt, ui) {
+                        contdiv = $(evt.target);
+                        formtype = contdiv.closest('.aspect').attr('id');
+                        formpos = contdiv.closest('.slider').hasClass('top') ? 'top' : 'bottom';
+                        inputelm = $('<input type="hidden" value="0"/>').attr('name',formtype + '-' + formpos);
+                        contdiv.append(inputelm);
+                    },
+                    change: function(evt, ui) {
+                        $(ui.handle).siblings('input').val(ui.value);
+                    }
+                });
+
+                //Make the buttons work
+                $('#sharebox li#export a').click(function() {
+                    $('#slider_form').submit();
+                });
+                $('#sharebox li#link a').click(function() {
+                    data = $('#slider_form').serialize();
+                    $('#slider_form').submit();
+                });
             });
         </script>
 
@@ -53,6 +74,7 @@
                 <a href="http://bit.ly/ipmgbqr"><img id="readmore" src="images/readmore.png"/></a>
             </div>
             <div id="right">
+                <form id="slider_form" method="post" action="genimage.php" target="_blank">
                 <?php foreach($sliders as $id=>$conf): ?>
                 <?php $lbl = $conf['labels']; ?>
                 <div class="aspect" id="<?php echo $id ?>">
@@ -139,8 +161,53 @@
                     <div style="clear:both;"></div>
                 </div>
                 <?php endforeach; ?>
+                </form>
             </div>
             <div style="clear:both;"></div>
+        </div>
+        <div id="sharebox">
+            <div id="content">
+                <div class="tabcontent" id="content_export">
+                </div>
+                <div class="tabcontent" id="content_facebook">
+                </div>
+                <div class="tabcontent" id="content_tumblr">
+                </div>
+                <div class="tabcontent" id="content_twitter">
+                </div>
+            </div>
+            <div id="tabs">
+                <ul>
+                    <li id="export">
+                        <a href="#export">
+                            <img src="images/share/export.png"/>
+                        </a>
+                    </li>
+                    <li id="link">
+                        <a href="#link">
+                            <img src="images/share/link.png"/>
+                        </a>
+                    </li>
+                    <li id="share" class="divider">
+                        SHARE:
+                    </li>
+                    <li id="facebook">
+                        <a href="#facebook">
+                            <img src="images/share/facebook.png"/>
+                        </a>
+                    </li>
+                    <li id="tumblr">
+                        <a href="#tumblr">
+                            <img src="images/share/tumblr.png"/>
+                        </a>
+                    </li>
+                    <li id="twitter">
+                        <a href="#twitter">
+                            <img src="images/share/twitter.png"/>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
         </div>
     </body>
 </html>
