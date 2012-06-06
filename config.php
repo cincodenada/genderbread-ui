@@ -71,4 +71,16 @@ $sliders = array(
         ),
     ),
 );
+
+$template_data = array(
+    'slider_start' => 882,
+    'slider_end' => 1071,
+    'slider_space' => 38,
+    'y_vals' => array(
+        'gender_identity' => array(162,200),
+        'gender_expression' => array(359,396),
+        'biological_sex' => array(555,593),
+        'attracted_to' => array(750,788),
+    )
+);
 ?>
