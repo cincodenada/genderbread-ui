@@ -63,6 +63,7 @@
     </head>
     <body>
         <img id="onion" style="display:none;" src="images/Genderbread-2.1.png"/>
+        <form id="slider_form" method="post" action="genimage.php" target="_blank">
         <div id="wrapper">
             <div id="top">
                 <h1>The Genderbread Person v2.0</h1>
@@ -80,7 +81,6 @@
                 <a href="http://bit.ly/ipmgbqr"><img id="readmore" src="images/readmore.png"/></a>
             </div>
             <div id="right">
-                <form id="slider_form" method="post" action="genimage.php" target="_blank">
                 <?php foreach($sliders as $id=>$conf): ?>
                 <?php $lbl = $conf['labels']; ?>
                 <div class="aspect" id="<?php echo $id ?>">
@@ -170,7 +170,13 @@
                 </form>
             </div>
             <div style="clear:both;"></div>
+            <div class="actionbox">
+                Name (optional): <input type="text" id="name" name="name"/>
+                <input type="submit" value="Generate" name="submit" id="gen-derbread"/>
+            </div> 
         </div>
+        </form>
+<!--
         <div id="sharebox">
             <div id="content">
                 <div class="tabcontent" id="content_export">
@@ -203,6 +209,9 @@
                         </a>
                     </li>
                     <li id="tumblr">
+                        <?php
+                        $tumblrshare = sprintf("http://www.tumblr.com/share/photo?source=%s&caption=%s&click_thru=%s");
+                        ?>
                         <a href="#tumblr">
                             <img src="images/share/tumblr.png"/>
                         </a>
@@ -215,5 +224,7 @@
                 </ul> 
             </div>
         </div>
+    -->
+        <script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script>
     </body>
 </html>
