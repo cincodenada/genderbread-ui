@@ -32,6 +32,12 @@
                     data = $('#slider_form').serialize();
                     $('#slider_form').submit();
                 });
+                $('.preset_box').click(function() {
+                    presetbox = $(this);
+                    sliderbox = presetbox.closest('.aspect').find('.sliders');
+                    sliderbox.find('.top').slider('value',presetbox.find('.top').data('value')*100);
+                    sliderbox.find('.bottom').slider('value',presetbox.find('.bottom').data('value')*100);
+                });
             });
         </script>
 
@@ -135,7 +141,7 @@
                                 $bottom = max(0,min(1,$bottom));
                             ?>
                             <div class="preset_box">
-                                <div class="marker">
+                            <div class="marker top" data-value="<?php echo $top ?>">
                                     <img 
                                         class="star" 
                                         alt="<?php echo "{$lbl['top']}: $top" ?>" 
@@ -143,7 +149,7 @@
                                         style="left:<?php echo $top * 100 ?>%;"
                                     />
                                 </div>
-                                <div class="marker">
+                                <div class="marker bottom" data-value="<?php echo $bottom ?>">
                                     <img 
                                         class="star" 
                                         alt="<?php echo "{$lbl['bottom']}: $bottom" ?>" 
