@@ -1,0 +1,5 @@
+<IfModule rewrite_module>
+    RewriteEngine on
+
+    RewriteRule gb/(.*) sharer.php?gbid=$1 [L]
+</IfModule>

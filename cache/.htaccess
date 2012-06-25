@@ -1,0 +1,6 @@
+<IfModule rewrite_module>
+    RewriteEngine on
+
+    RewriteCond %{REQUEST_URI} !-f
+    RewriteRule ^(.*).png$ ../genimage.php?key=$1 [L]
+</IfModule>
