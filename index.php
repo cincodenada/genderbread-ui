@@ -64,6 +64,14 @@
     <body>
         <img id="onion" style="display:none;" src="images/Genderbread-2.1.png"/>
         <form id="slider_form" method="post" action="genimage.php" target="_blank">
+        <div class="header">
+            <ul>
+                <li><a href="/genderbread/">Make a Genderbread</a></li>
+                <li><a href="learn.html">Learn about Genderbread</a></li>
+                <li><a href="gallery.html">See other's Genderbreads</a></li>
+            </ul>
+            <div style="clear: both;"></div>
+        </div>
         <div id="wrapper">
             <div id="top">
                 <h1>The Genderbread Person v2.0</h1>
@@ -167,7 +175,6 @@
                     <div style="clear:both;"></div>
                 </div>
                 <?php endforeach; ?>
-                </form>
             </div>
             <div style="clear:both;"></div>
             <div class="actionbox">
@@ -176,6 +183,9 @@
             </div> 
         </div>
         </form>
+        <div class="footer">
+            Genderbread created by Sam Killerman.  This interactive version created by Joel Bradshaw.  Blog Tumblr Facebook Twitter
+        </div>
 <!--
         <div id="sharebox">
             <div id="content">
